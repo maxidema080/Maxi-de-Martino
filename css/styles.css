@@ -338,7 +338,7 @@ nav a img{
 }
 @keyframes moverBoton{
     0%{
-        background-color: #96fa38;
+        background-color: #008000;
         bottom: 1em;
         right: 1em;
     }
@@ -372,7 +372,7 @@ nav a img{
     justify-content: center;
     align-items: center;
     animation-name: moverBoton;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-delay: 0.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
