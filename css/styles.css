@@ -275,7 +275,7 @@ footer{
     font-style: oblique;
 }
 .articulo{
-    width: 10em;
+    width: 20em;
     background-color: #ffc0cb;
     height: 18em;
     padding: 1em 1.5em;
@@ -283,9 +283,23 @@ footer{
     border: groove 0.2em #0000ff;
     border-radius: 1em;
 }
-
+.articulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .articulo2{
-    width: 10em;
+    width: 15em;
+    background-color: #ffa500;
+    height: 13em;
+    padding: 1em 1.5em;
+    margin: 0.5em 0.7em 1em 0.7em;
+    border: groove 0.2em #ffffff;
+    border-radius: 1em;
+}
+.articulo5{
+    width: 15em;
     background-color: #ffa500;
     height: 13em;
     padding: 1em 1.5em;
