@@ -86,6 +86,9 @@ header a img {
   margin-left: 0, 5em;
 }
 header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
   width: 100%;
   background-color: #000000;
 }
@@ -107,9 +110,12 @@ header nav ul li a {
 }
 
 footer {
+  background-color: tomato;
   grid-area: footer;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 footer .enlaces {
   display: flex;
@@ -119,61 +125,68 @@ footer .enlaces {
   padding: 2em;
 }
 footer .enlaces .links {
+  height: 30%;
+  width: 15%;
+  margin: 0.5em;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 2em;
-  background-color: #ff7f50;
+  padding: 0.5em;
 }
 footer .enlaces .links h2 {
   color: black;
 }
 footer .enlaces .links nav ul li {
+  list-style-type: none;
   margin-bottom: 1em;
 }
 footer .enlaces .links nav ul li a {
+  text-decoration: none;
   font-size: 0.9em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #000000;
 }
-footer .redes {
+footer .enlaces .redes {
+  height: 260px;
+  width: 25%;
+  margin: 0.5em;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  padding: 2em;
-  background-color: #ff7f50;
 }
-footer .redes h2 nav ul li {
+footer .enlaces .redes h2 nav ul li {
+  list-style-type: none;
   margin-bottom: 1em;
 }
-footer .redes h2 nav ul li a {
+footer .enlaces .redes h2 nav ul li a {
+  text-decoration: none;
   font-size: 0.9em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #000000;
 }
-footer .informacion {
+footer .enlaces .informacion {
+  height: 260px;
+  width: 35%;
+  margin: 0.5em;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  padding: 2em;
-  background-color: #ff7f50;
 }
-footer .informacion h2 nav ul li {
+footer .enlaces .informacion h2 nav ul li {
+  text-decoration: none;
+  list-style-type: none;
   margin-bottom: 1em;
 }
-footer .informacion h2 nav ul li a {
+footer .enlaces .informacion h2 nav ul li a {
   font-size: 0.9em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #000000;
 }
-footer .copyright h3 {
-  background-color: #ff7f50;
+footer .enlaces .copyright h3 {
+  color: #000000;
 }
-footer .copyright p {
-  background-color: #ff7f50;
+footer .enlaces .copyright p {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   line-height: 1.5;

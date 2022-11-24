@@ -62,6 +62,9 @@ header{
         }
     }
     nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
         width: 100%;
         background-color: #000000;
         ul{
@@ -84,10 +87,13 @@ header{
 }
 
 footer{
+    background-color: tomato;
     grid-area: footer;
     //background-color: #ffffff;//
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     .enlaces{
         display: flex;
         flex-direction: row;
@@ -95,20 +101,25 @@ footer{
         align-items: center;
         padding: 2em;
         .links{
+            height: 30%;
+            width: 15%;
+            margin: 0.5em;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            padding: 2em;
-            background-color:#ff7f50 ;
+            padding: 0.5em;
             h2{
             color: black;
             }
             nav{
                 ul{
+                    
                     li{
+                        list-style-type: none;
                         margin-bottom: 1em;
                         a{
+                            text-decoration: none;
                             font-size: 0.9em;
                             font-family: Verdana, Geneva, Tahoma, sans-serif;
                             color: #000000;
@@ -117,63 +128,67 @@ footer{
                 }
             }
         }
-    }
-    .redes{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        padding: 2em;
-        background-color: #ff7f50;
-        h2{
-            nav{
-                ul{
-                    li{
-                        margin-bottom: 1em;
-                        a{
-                            font-size: 0.9em;
-                            font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            color: #000000;
+        .redes{
+            height: 260px;
+            width: 25%;
+            margin: 0.5em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                nav{
+                    
+                    ul{
+                        li{
+                            list-style-type: none;
+                            margin-bottom: 1em;
+                            a{
+                                text-decoration: none;
+                                font-size: 0.9em;
+                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                color: #000000;
+                            }
                         }
                     }
                 }
             }
         }
-    }
-    .informacion{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        padding: 2em;
-        background-color: #ff7f50;
-        h2{
-            nav{
-                ul{
-                    li{
-                        margin-bottom: 1em;
-                        a {
-                            font-size: 0.9em;
-                            font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            color: #000000;
+        .informacion{
+            height: 260px;
+            width: 35%;
+            margin: 0.5em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                nav{
+                    ul{
+                        li{
+                            text-decoration: none;
+                            list-style-type: none;
+                            margin-bottom: 1em;
+                            a {
+                                font-size: 0.9em;
+                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                color: #000000;
+                            }
                         }
                     }
                 }
             }
         }
-    }
-    .copyright{
-        h3{
-        background-color: #ff7f50;
-        }
-        p{
-            background-color: #ff7f50;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            line-height: 1.5;
-        }
+        .copyright{
+            h3{
+                color: #000000;
+            }
+            p{
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                line-height: 1.5;
+            }
         }
     }
+}
 
 
 
