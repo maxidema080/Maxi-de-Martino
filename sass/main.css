@@ -1,1 +1,624 @@
-/*# sourceMappingURL=main.css.map */
+@font-face {
+  font-family: "Milligram";
+  src: url("../assets/fonts/Milligram-Thin-trial.ttf");
+  font-family: "Swanstone";
+  src: url("../assets/fonts/Swanstone-Regular-trial.ttf");
+}
+@-webkit-keyframes moverBoton {
+  0% {
+    background-color: #008000;
+    bottom: 1em;
+    right: 1em;
+  }
+  25% {
+    background-image: radial-gradient(#f25e3d, #8C402E, #404040);
+    bottom: 1.5em;
+    right: 1.5em;
+  }
+  50% {
+    bottom: 2em;
+    right: 2em;
+  }
+  75% {
+    bottom: 2.5em;
+    right: 2.5em;
+  }
+  100% {
+    bottom: 3em;
+    right: 3em;
+  }
+}
+@keyframes moverBoton {
+  0% {
+    background-color: #008000;
+    bottom: 1em;
+    right: 1em;
+  }
+  25% {
+    background-image: radial-gradient(#f25e3d, #8C402E, #404040);
+    bottom: 1.5em;
+    right: 1.5em;
+  }
+  50% {
+    bottom: 2em;
+    right: 2em;
+  }
+  75% {
+    bottom: 2.5em;
+    right: 2.5em;
+  }
+  100% {
+    bottom: 3em;
+    right: 3em;
+  }
+}
+.btn-wsp {
+  width: 4em;
+  height: 4em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation-name: moverBoton;
+          animation-name: moverBoton;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+header {
+  grid-area: header;
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+}
+header a img {
+  width: 113px;
+  margin-left: 0, 5em;
+}
+header nav {
+  width: 100%;
+  background-color: #000000;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space space-around;
+  align-items: center;
+}
+header nav ul li {
+  display: inline;
+  font-family: "Courier New", Courier, monospace;
+  margin: 10px;
+  width: 7em;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+}
+footer .enlaces {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2em;
+}
+footer .enlaces .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2em;
+  background-color: #ff7f50;
+}
+footer .enlaces .links h2 {
+  color: black;
+}
+footer .enlaces .links nav ul li {
+  margin-bottom: 1em;
+}
+footer .enlaces .links nav ul li a {
+  font-size: 0.9em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #000000;
+}
+footer .redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2em;
+  background-color: #ff7f50;
+}
+footer .redes h2 nav ul li {
+  margin-bottom: 1em;
+}
+footer .redes h2 nav ul li a {
+  font-size: 0.9em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #000000;
+}
+footer .informacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2em;
+  background-color: #ff7f50;
+}
+footer .informacion h2 nav ul li {
+  margin-bottom: 1em;
+}
+footer .informacion h2 nav ul li a {
+  font-size: 0.9em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #000000;
+}
+footer .copyright h3 {
+  background-color: #ff7f50;
+}
+footer .copyright p {
+  background-color: #ff7f50;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* INICIO */
+.gridIndex {
+  background-color: pink;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, autofill);
+  grid-template-areas: "header header header" "main   main   main" "footer footer footer";
+}
+.gridIndex main {
+  grid-area: main;
+}
+.gridIndex main .title-index h1 {
+  color: #ffffff;
+  font-size: 3em;
+  margin: 1em;
+}
+.gridIndex main div p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.gridIndex main div a {
+  text-transform: uppercase;
+}
+.gridIndex main .section-em {
+  font-size: 1em;
+}
+.gridIndex main .section-em h2 {
+  text-decoration: underline;
+  font-style: italic;
+}
+.gridIndex main .section-em p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.gridIndex main .section-em div img {
+  width: 100%;
+}
+.gridIndex main .boton {
+  display: none;
+}
+.gridIndex main .boton .btn-wsp {
+  width: 4em;
+  height: 4em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation-name: moverBoton;
+          animation-name: moverBoton;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+/* ACTIVIDADES */
+.parallax {
+  background-image: url("../assets/img/verde.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 85vh;
+}
+.parallax section .title-index1 {
+  color: red;
+  font-size: 2.5em;
+  margin: 1em;
+  text-align: center;
+}
+.parallax section p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.parallax section .articulo3 {
+  width: 70em;
+  background-color: #add8e6;
+  height: 50em;
+  padding: 1em 1.5em;
+  margin: 0.5em 0.7em 1em 0.7em;
+  border: groove 0.2em #ff7f50;
+  border-radius: 1em;
+}
+.parallax section .articulo3 {
+  width: 70em;
+  background-color: #add8e6;
+  height: 50em;
+  padding: 1em 1.5em;
+  margin: 0.5em 0.7em 1em 0.7em;
+  border: groove 0.2em #ff7f50;
+  border-radius: 1em;
+}
+.parallax section .boton {
+  display: none;
+}
+.parallax section .boton .btn-wsp {
+  width: 4em;
+  height: 4em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation-name: moverBoton;
+          animation-name: moverBoton;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+/* CONTACTO */
+.parallax2 {
+  background-image: url("../assets/img/rosa.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 85vh;
+}
+.parallax2 main .titulo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2em;
+}
+.parallax2 main .titulo .title-index4 {
+  color: #008000;
+  font-size: 2.5em;
+}
+.parallax2 main .titulo p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.parallax2 main .titulo .articulo1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+.parallax2 main .titulo mapa {
+  width: 35em;
+}
+.parallax2 main .titulo mapa .mapa h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 1em;
+}
+.parallax2 main .titulo .boton {
+  display: none;
+}
+.parallax2 main .titulo .boton .btn-wsp {
+  width: 4em;
+  height: 4em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation-name: moverBoton;
+          animation-name: moverBoton;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+/* MISION */
+.parallax1 {
+  background-image: url("../assets/img/amarillo.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 85vh;
+}
+.parallax1 main .title-index3 {
+  color: #8b008b;
+  font-size: 2.5em;
+  margin: 1em;
+}
+.parallax1 main .articulo5 {
+  width: 15em;
+  background-color: #ffa500;
+  height: 13em;
+  padding: 1em 1.5em;
+  margin: 0.5em 0.7em 1em 0.7em;
+  border: groove 0.2em #ffffff;
+  border-radius: 1em;
+}
+.parallax1 main .boton {
+  display: none;
+}
+.parallax1 main .boton .btn-wsp {
+  width: 4em;
+  height: 4em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation-name: moverBoton;
+          animation-name: moverBoton;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+/* PREGUNTAS FRECUENTES */
+.parallax3 {
+  background-image: url("../assets/img/naranja.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 85vh;
+}
+.parallax3 main .title-index2 {
+  color: #0000ff;
+  font-size: 2.5em;
+  margin: 1em;
+}
+.parallax3 main .seccion-faq {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.parallax3 main .seccion-faq .articulo {
+  width: 20em;
+  background-color: #ffc0cb;
+  height: 18em;
+  padding: 1em 1.5em;
+  margin: 0.5em 0.7em 1em 0.7em;
+  border: groove 0.2em #0000ff;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.parallax3 main .seccion-faq .articulo .articulo__titulo {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+.parallax3 main .articulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.parallax3 main .articulo .articulo__titulo {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+.parallax3 main .articulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.parallax3 main .articulo .articulo__titulo {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+.parallax3 main .articulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.parallax3 main .articulo .articulo__titulo {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+.parallax3 main .articulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.parallax3 main .articulo .articulo__titulo {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+.parallax3 main .articulo .articulo__titulo ul li .articulo__boton {
+  color: #ff0000;
+  text-decoration: underline;
+  font-style: oblique;
+}
+.parallax3 main .boton {
+  display: none;
+}
+.parallax3 main .boton .btn-wsp {
+  width: 4em;
+  height: 4em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation-name: moverBoton;
+          animation-name: moverBoton;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@media screen and (min-width: 768px) and (max-width: 800px) {
+  .gridIndex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, autofill);
+    grid-template-areas: "header header" "main   main" "footer footer";
+  }
+  .boton {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .gridIndex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, autofill);
+    grid-template-areas: "header header" "main   main" "footer footer";
+  }
+  .articulo1 {
+    width: 35em;
+  }
+  .mapa {
+    width: 35em;
+  }
+}
+@media screen and (min-width: 414px) and (max-width: 896px) {
+  .grilla-index {
+    grid-template-columns: 1fr;
+    grid-template-rows: 22% 5% 50% 40% 15%;
+    grid-template-areas: "menu" "principal" "seccion" "publicidad" "pie";
+    /* grid-row-gap: 1em;
+    width: 100%;
+    height: 100%; */
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1028px) {
+  .grilla-index {
+    grid-template-columns: 2, 1fr;
+    grid-template-rows: 10% 80% 60% 20%;
+    grid-template-areas: "menu" "principal publicidad" "seccion publicidad" "pie pie";
+    /* grid-row-gap: 1em;
+    width: 100%;
+    height: 100%; */
+  }
+}
+@keyframes moverBoton {
+  0% {
+    background-color: #008000;
+    bottom: 1em;
+    right: 1em;
+  }
+  25% {
+    background-image: radial-gradient(#f25e3d, #8C402E, #404040);
+    bottom: 1.5em;
+    right: 1.5em;
+  }
+  50% {
+    bottom: 2em;
+    right: 2em;
+  }
+  75% {
+    bottom: 2.5em;
+    right: 2.5em;
+  }
+  100% {
+    bottom: 3em;
+    right: 3em;
+  }
+}
+.btn-wsp {
+  width: 4em;
+  height: 4em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation-name: moverBoton;
+          animation-name: moverBoton;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}/*# sourceMappingURL=main.css.map */
