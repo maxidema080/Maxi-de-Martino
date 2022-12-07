@@ -1,3 +1,9 @@
+*{
+    margin:0; 
+    padding: 0;
+    overflow: hidden;
+}      
+
 @font-face {
     font-family: "Milligram" ;
     src: url("../assets/fonts/Milligram-Thin-trial.ttf");
@@ -88,7 +94,8 @@ header{
 
 footer{
     background-color: tomato;
-    grid-area: footer;
+    height: auto;
+    padding: 10rem 0 10rem 0;
     //background-color: #ffffff;//
     display: flex;
     flex-direction: row;
@@ -196,13 +203,13 @@ footer{
 
 .gridIndex{
     background-color: pink;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, autofill);
-    grid-template-areas: 
-    "header header header"
-    "main   main   main"
-    "footer footer footer";
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(3, autofill);
+    // grid-template-areas: 
+    // "header header header"
+    // "main   main   main"
+    // "footer footer footer";
     main{
         grid-area: main;
         .title-index{
@@ -545,72 +552,30 @@ footer{
     }
 }
 
-@media screen and (min-width:768px) and (max-width:800px){
-
-    .gridIndex{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, autofill);
-        grid-template-areas: 
-        "header header"
-        "main   main"
-        "footer footer";
-    }
-
-    .boton{
-        display: none;
-    }
-}
-@media screen and (min-width:768px) and (max-width:1024px){
 
 
-    .gridIndex{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, autofill);
-        grid-template-areas: 
-        "header header"
-        "main   main"
-        "footer footer";
-    }
 
-    .articulo1{
-        width: 35em;
-    }
-
-    .mapa{
-        width: 35em;
+@media only screen and (min-width: 768px) and (max-width:1024px) {
+    .gridIndex {
+        background-color: tomato;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
 }
 
-@media screen and (min-width: 414px) and (max-width: 896px) {
-    .grilla-index{
-        grid-template-columns: 1fr;
-        grid-template-rows: 22% 5% 50% 40% 15%;
-        grid-template-areas: 
-            "menu"
-            "principal"
-            "seccion"
-            "publicidad"
-            "pie";
-        /* grid-row-gap: 1em;
-        width: 100%;
-        height: 100%; */
-    }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
 }
 
-@media screen and (min-width: 768px) and (max-width:1028px) {
-    .grilla-index{
-        grid-template-columns: (2, 1fr);
-        grid-template-rows: 10% 80% 60% 20%;
-        grid-template-areas: 
-            "menu"
-            "principal publicidad"
-            "seccion publicidad"
-            "pie pie";
-        /* grid-row-gap: 1em;
-        width: 100%;
-        height: 100%; */
+.hola {
+    background-color: #0000ff;
+    height: 100vh;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .footer {
+        background-color: white;
+        display: flex;
     }
 }
 
