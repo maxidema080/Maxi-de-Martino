@@ -1,613 +1,89 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Milligram";
-  src: url("../assets/fonts/Milligram-Thin-trial.ttf");
-  font-family: "Swanstone";
-  src: url("../assets/fonts/Swanstone-Regular-trial.ttf");
+.heroImage {
+  height: 100vh;
+  background-image: url("../assets/img/hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-@-webkit-keyframes moverBoton {
-  0% {
-    background-color: #008000;
-    bottom: 1em;
-    right: 1em;
-  }
-  25% {
-    background-image: radial-gradient(#f25e3d, #8C402E, #404040);
-    bottom: 1.5em;
-    right: 1.5em;
-  }
-  50% {
-    bottom: 2em;
-    right: 2em;
-  }
-  75% {
-    bottom: 2.5em;
-    right: 2.5em;
-  }
-  100% {
-    bottom: 3em;
-    right: 3em;
-  }
-}
-@keyframes moverBoton {
-  0% {
-    background-color: #008000;
-    bottom: 1em;
-    right: 1em;
-  }
-  25% {
-    background-image: radial-gradient(#f25e3d, #8C402E, #404040);
-    bottom: 1.5em;
-    right: 1.5em;
-  }
-  50% {
-    bottom: 2em;
-    right: 2em;
-  }
-  75% {
-    bottom: 2.5em;
-    right: 2.5em;
-  }
-  100% {
-    bottom: 3em;
-    right: 3em;
-  }
-}
-.btn-wsp {
-  width: 4em;
-  height: 4em;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  border-radius: 3em;
+.heroImage .heroContent {
+  height: 100% !important;
+  color: #fff;
   display: flex;
+  justify-content: center !important;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation-name: moverBoton;
-          animation-name: moverBoton;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }
-
-header {
-  grid-area: header;
-  background-color: #000000;
-  display: flex;
-  flex-direction: row;
+.heroImage .heroContent h1 {
+  font-size: 4rem;
 }
-header a img {
-  width: 113px;
-  margin-left: 0, 5em;
+.heroImage .heroContent p {
+  font-size: 1rem;
+  margin: 0.5rem 0 2rem 0;
 }
-header nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  width: 100%;
-  background-color: #000000;
-}
-header nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space space-around;
-  align-items: center;
-}
-header nav ul li {
-  display: inline;
-  font-family: "Courier New", Courier, monospace;
-  margin: 10px;
-  width: 7em;
-}
-header nav ul li a {
+.heroImage .heroContent .heroBtn a {
+  padding: 15px 30px;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
+  background-color: #e10f60;
+  border-radius: 5px;
 }
 
-footer {
-  background-color: tomato;
+.conocenos {
   height: auto;
-  padding: 10rem 0 10rem 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  padding: 5rem 0 5rem 0;
 }
-footer .enlaces {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 2em;
+.conocenos .conocenosText {
+  text-align: center;
 }
-footer .enlaces .links {
-  height: 30%;
-  width: 15%;
-  margin: 0.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0.5em;
+.conocenos .divImgConocenos {
+  text-align: center;
 }
-footer .enlaces .links h2 {
+.conocenos .divImgConocenos .imgConocenos {
+  width: 300px;
+  margin: auto auto;
+  border-radius: 5px;
+}
+
+.page-footer {
+  color: #fff;
+  background-color: #000;
+}
+
+.actividades {
+  background-color: #e10f60;
+  height: auto;
+  padding: 5rem 0 5rem 0;
+}
+
+.articulo1 {
+  background-color: #e10f60;
   color: black;
 }
-footer .enlaces .links nav ul li {
-  list-style-type: none;
-  margin-bottom: 1em;
-}
-footer .enlaces .links nav ul li a {
-  text-decoration: none;
-  font-size: 0.9em;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #000000;
-}
-footer .enlaces .redes {
-  height: 260px;
-  width: 25%;
-  margin: 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-footer .enlaces .redes h2 nav ul li {
-  list-style-type: none;
-  margin-bottom: 1em;
-}
-footer .enlaces .redes h2 nav ul li a {
-  text-decoration: none;
-  font-size: 0.9em;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #000000;
-}
-footer .enlaces .informacion {
-  height: 260px;
-  width: 35%;
-  margin: 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-footer .enlaces .informacion h2 nav ul li {
-  text-decoration: none;
-  list-style-type: none;
-  margin-bottom: 1em;
-}
-footer .enlaces .informacion h2 nav ul li a {
-  font-size: 0.9em;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #000000;
-}
-footer .enlaces .copyright h3 {
-  color: #000000;
-}
-footer .enlaces .copyright p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  line-height: 1.5;
-}
 
-/* INICIO */
-.gridIndex {
-  background-color: pink;
-}
-.gridIndex main {
-  grid-area: main;
-}
-.gridIndex main .title-index h1 {
-  color: #ffffff;
-  font-size: 3em;
-  margin: 1em;
-}
-.gridIndex main div p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  line-height: 1.5;
-}
-.gridIndex main div a {
-  text-transform: uppercase;
-}
-.gridIndex main .section-em {
-  font-size: 1em;
-}
-.gridIndex main .section-em h2 {
-  text-decoration: underline;
-  font-style: italic;
-}
-.gridIndex main .section-em p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  line-height: 1.5;
-}
-.gridIndex main .section-em div img {
-  width: 100%;
-}
-.gridIndex main .boton {
-  display: none;
-}
-.gridIndex main .boton .btn-wsp {
-  width: 4em;
-  height: 4em;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  border-radius: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation-name: moverBoton;
-          animation-name: moverBoton;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-/* ACTIVIDADES */
 .parallax {
-  background-image: url("../assets/img/verde.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 85vh;
+  background-color: lightblue;
 }
-.parallax section .title-index1 {
-  color: red;
-  font-size: 2.5em;
-  margin: 1em;
+
+.parallax49 {
+  background-color: #e10f60;
+  color: white;
+}
+
+.parallax50 {
+  background-color: #e10f60;
+  color: lightblue;
+}
+
+.parallax51 {
+  background-color: #e10f60;
+  color: #000;
+}
+
+.mision {
   text-align: center;
-}
-.parallax section p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  line-height: 1.5;
-}
-.parallax section .articulo3 {
-  width: 70em;
-  background-color: #add8e6;
-  height: 50em;
-  padding: 1em 1.5em;
-  margin: 0.5em 0.7em 1em 0.7em;
-  border: groove 0.2em #ff7f50;
-  border-radius: 1em;
-}
-.parallax section .articulo3 {
-  width: 70em;
-  background-color: #add8e6;
-  height: 50em;
-  padding: 1em 1.5em;
-  margin: 0.5em 0.7em 1em 0.7em;
-  border: groove 0.2em #ff7f50;
-  border-radius: 1em;
-}
-.parallax section .boton {
-  display: none;
-}
-.parallax section .boton .btn-wsp {
-  width: 4em;
-  height: 4em;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  border-radius: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation-name: moverBoton;
-          animation-name: moverBoton;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-/* CONTACTO */
-.parallax2 {
-  background-image: url("../assets/img/rosa.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 85vh;
-}
-.parallax2 main .titulo {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 2em;
-}
-.parallax2 main .titulo .title-index4 {
-  color: #008000;
-  font-size: 2.5em;
-}
-.parallax2 main .titulo p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  line-height: 1.5;
-}
-.parallax2 main .titulo .articulo1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2em;
-}
-.parallax2 main .titulo mapa {
-  width: 35em;
-}
-.parallax2 main .titulo mapa .mapa h2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: 1em;
-}
-.parallax2 main .titulo .boton {
-  display: none;
-}
-.parallax2 main .titulo .boton .btn-wsp {
-  width: 4em;
-  height: 4em;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  border-radius: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation-name: moverBoton;
-          animation-name: moverBoton;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-/* MISION */
-.parallax1 {
-  background-image: url("../assets/img/amarillo.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 85vh;
-}
-.parallax1 main .title-index3 {
-  color: #8b008b;
-  font-size: 2.5em;
-  margin: 1em;
-}
-.parallax1 main .articulo5 {
-  width: 15em;
-  background-color: #ffa500;
-  height: 13em;
-  padding: 1em 1.5em;
-  margin: 0.5em 0.7em 1em 0.7em;
-  border: groove 0.2em #ffffff;
-  border-radius: 1em;
-}
-.parallax1 main .boton {
-  display: none;
-}
-.parallax1 main .boton .btn-wsp {
-  width: 4em;
-  height: 4em;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  border-radius: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation-name: moverBoton;
-          animation-name: moverBoton;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-/* PREGUNTAS FRECUENTES */
-.parallax3 {
-  background-image: url("../assets/img/naranja.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 85vh;
-}
-.parallax3 main .title-index2 {
-  color: #0000ff;
-  font-size: 2.5em;
-  margin: 1em;
-}
-.parallax3 main .seccion-faq {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.parallax3 main .seccion-faq .articulo {
-  width: 20em;
-  background-color: #ffc0cb;
-  height: 18em;
-  padding: 1em 1.5em;
-  margin: 0.5em 0.7em 1em 0.7em;
-  border: groove 0.2em #0000ff;
-  border-radius: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.parallax3 main .seccion-faq .articulo .articulo__titulo {
-  color: #ffffff;
-  font-size: 1.5em;
-}
-.parallax3 main .articulo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.parallax3 main .articulo .articulo__titulo {
-  color: #ffffff;
-  font-size: 1.5em;
-}
-.parallax3 main .articulo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.parallax3 main .articulo .articulo__titulo {
-  color: #ffffff;
-  font-size: 1.5em;
-}
-.parallax3 main .articulo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.parallax3 main .articulo .articulo__titulo {
-  color: #ffffff;
-  font-size: 1.5em;
-}
-.parallax3 main .articulo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.parallax3 main .articulo .articulo__titulo {
-  color: #ffffff;
-  font-size: 1.5em;
-}
-.parallax3 main .articulo .articulo__titulo ul li .articulo__boton {
-  color: #ff0000;
-  text-decoration: underline;
-  font-style: oblique;
-}
-.parallax3 main .boton {
-  display: none;
-}
-.parallax3 main .boton .btn-wsp {
-  width: 4em;
-  height: 4em;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  border-radius: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation-name: moverBoton;
-          animation-name: moverBoton;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .gridIndex {
-    background-color: tomato;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-}
-.hola {
-  background-color: #0000ff;
-  height: 100vh;
-}
-
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-  .footer {
-    background-color: white;
-    display: flex;
-  }
-}
-@keyframes moverBoton {
-  0% {
-    background-color: #008000;
-    bottom: 1em;
-    right: 1em;
-  }
-  25% {
-    background-image: radial-gradient(#f25e3d, #8C402E, #404040);
-    bottom: 1.5em;
-    right: 1.5em;
-  }
-  50% {
-    bottom: 2em;
-    right: 2em;
-  }
-  75% {
-    bottom: 2.5em;
-    right: 2.5em;
-  }
-  100% {
-    bottom: 3em;
-    right: 3em;
-  }
-}
-.btn-wsp {
-  width: 4em;
-  height: 4em;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  border-radius: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation-name: moverBoton;
-          animation-name: moverBoton;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }/*# sourceMappingURL=main.css.map */
